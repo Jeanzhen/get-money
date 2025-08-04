@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Loyalty Program</title>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <script async="" src="8f54672b663e0803577151f7b25a4acc.static.js"></script>
+  <style>    @charset "UTF-8"; /*Обнуление*/
+  * {
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+
+  :focus, :active {
+    outline: none;
+  }
+
+  a:focus, a:active {
+    outline: none;
+  }
+
+  nav, footer, header, aside {
+    display: block;
+  }
+
+  html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%; /*    overflow: auto;*/
+  }
+
+  input, button, textarea {
+    font-family: inherit;
+  }
+
+  input::-ms-clear {
+    display: none;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+
+  a, a:visited {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  ul li {
+    list-style: none;
+  }
+
+  img {
+    vertical-align: top;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: 400;
+  }
+
+  /*--------------------*/
+  @font-face {
+    font-family: "CenturyGothic";
+    src: url("../fonts/CenturyGothic.woff2") format("woff2"), url("../fonts/CenturyGothic.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "CenturyGothic";
+    src: url("../fonts/CenturyGothic-Bold.woff2") format("woff2"), url("../fonts/CenturyGothic-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 100%;
+  }
+
+  body {
+    font-family: "CenturyGothic", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+    line-height: 130%;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+  }
+
+  .wrapper .main {
+    flex: 1 1 auto;
+  }
+
+  .header {
+    padding: 15px 0;
+    background: #2472b4;
+  }
+
+  .header__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header__text {
+    font-family: "CenturyGothic", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: #000;
+    line-height: 130%;
+  }
+
+  .info {
+    padding: 30px 0;
+  }
+
+  .info__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .info__left {
+    flex: 0 0 45%;
+  }
+
+  .info__title {
+    font-family: "CenturyGothic", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: #000;
+    line-height: 130%;
+    margin: 20px 0;
+  }
+
+  .info__text {
+    font-family: "CenturyGothic", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+    line-height: 130%;
+    margin: 10px 0;
+  }
+
+  .info__quesrion {
+    margin-top: 50px;
+  }
+
+  .wallet {
+    flex: 0 0 45%;
+  }
+
+  .wallet__title {
+    font-family: "CenturyGothic", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #000;
+    line-height: 130%;
+    margin: 30px 0;
+  }
+
+  .wallet__sum {
+    font-family: "CenturyGothic", sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    color: #000;
+    line-height: 130%;
+    margin: 20px 0;
+  }
+
+  .wallet__subtitle {
+    font-family: "CenturyGothic", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #999;
+    line-height: 130%;
+    margin: 20px 0;
+  }
+
+  .btn {
+    text-align: center;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-shadow: none;
+    box-sizing: none;
+    display: inline-block;
+    transition: 0.3s;
+    font-family: "CenturyGothic", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #fff;
+    line-height: 140%;
+    text-transform: uppercase;
+    padding: 15px 35px;
+    background: #2472b4;
+    border-radius: 50px;
+    text-align: center;
+  }
+
+  .btn:hover {
+    background: #003663;
+  }
+
+  .quesrion {
+    padding: 30px;
+    border: 1px solid #999;
+    border-radius: 20px;
+  }
+
+  .quesrion__text {
+    font-family: "CenturyGothic", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+    line-height: 130%;
+    margin-bottom: 20px;
+  }
+
+  .quesrion__btns {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .quesrion__btns .btn:first-child {
+    margin-bottom: 10px;
+  }
+
+  .quesrion__btns .btn {
+    width: 100%;
+  }
+
+  .footer {
+    background: #0e151f;
+    padding: 20px 0;
+  }
+
+  .footer__list {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 490px;
+  }
+
+  .footer__link {
+    margin: 15px;
+    font-family: "CenturyGothic", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #b3b6bd;
+    line-height: 130%;
+  }
+
+  .footer__cop {
+    text-align: center;
+    font-family: "CenturyGothic", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #b3b6bd;
+    line-height: 130%;
+  }
+
+  @media screen and (max-width: 768px) {
+    .info__top {
+      flex-direction: column;
+      align-items: start;
+    }
+
+    .footer__list {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .footer__cop {
+      margin-top: 40px;
+    }
+
+    .quesrion {
+      padding: 20px;
+    }
+
+    .wallet__sum {
+      font-size: 40px;
+    }
+
+    .info {
+      padding: 15px 0;
+    }
+  } </style>
+</head>
+<body aria-disabled="false" class="fr-view">
+<div class="wrapper">
+  <header class="header">
+    <div class="container">
+      <div class="header__body"><p class="header__text">Loyalty Program</p>
+        <p class="header__text"><span class="data-today">&nbsp;</span></p></div>
+    </div>
+  </header>
+  <main class="main">
+    <section class="info">
+      <div class="container">
+        <div class="info__top">
+          <div class="info__left"><p class="info__title">Congratulations!!</p>
+            <p class="info__text">Today, <span class="data-today">&nbsp;</span>, you have won <span
+                    style="font-weight: 700;">&nbsp;125,561.50!&nbsp;</span></p>
+            <p class="info__text">Answer 7 short questions and get your money <span
+                    style="font-weight: 700;">&nbsp;125,561.50!&nbsp;</span> This promo is valid only for
+              Nigeria.</p>
+            <p class="info__text"><br></p>
+            <p class="info__text">You have <span style="color: red;">&nbsp;<span
+                    class="timer-minutes">4</span> minutes and seconds left to complete this survey!&nbsp;</span>
+            </p>
+            <p class="info__text"><br></p></div>
+          <div class="wallet"><p class="wallet__title">Money</p>
+            <p class="wallet__sum">125,561.50</p>
+            <p class="wallet__subtitle">Available Balance</p><a class="btn"
+                                                                href="https://mp3u5t.mcgo2.com/click">Withdraw
+              Money</a></div>
+        </div>
+        <div class="info__quesrion">
+          <div class="quesrion"><p class="quesrion__text">Do you want to claim your money?</p>
+            <div class="quesrion__btns"><a class="btn" href="https://mp3u5t.mcgo2.com/click">Yes</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__list"><a class="footer__link" href="">Terms of Use</a> <a class="footer__link" href="">Privacy
+      Policy</a> <a class="footer__link" href="">Interest-Based Ads</a></div>
+    <p class="footer__cop">1996-2025 Globe.com, Inc.</p></div>
+</footer>
+<script src="215af71787e9e13f47bd4a554aa88171.static.js" type="text/javascript"></script>
+</body>
+</html>
+
+
